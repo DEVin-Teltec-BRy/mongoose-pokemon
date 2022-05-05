@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+require("dotenv").config();
 
-mongoose.connect('mongodb://localhost:27017/aula1')
+mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
 
 const db = mongoose.connection
 
